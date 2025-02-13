@@ -3,7 +3,7 @@ from auto_gptq import AutoGPTQForCausalLM
 
 class InferlessPythonModel:
   def initialize(self):
-      self.tokenizer = AutoTokenizer.from_pretrained("TheBloke/Wizard-Vicuna-13B-Uncensored-SuperHOT-8K-GPTQ", use_fast=True)
+      self.tokenizer = AutoTokenizer.from_pretrained("TheBloke/vicuna-7B-v1.3-GPTQ", use_fast=True)
       self.model = AutoGPTQForCausalLM.from_quantized(
         "TheBloke/vicuna-7B-v1.3-GPTQ",
         use_safetensors=True,
